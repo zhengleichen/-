@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>联系我们</title>
+	<style type="text/css">
+		body{	
+			margin: 0px;
+			background:url("img/bg.jpg") no-repeat;
+			background-size: cover;
+		
+		}
+		#mediate{
+			width:100%;
+			height: 300px;
+			position:absolute;/*相对于body的定位，效果居中*/
+			margin-top: -50px;
+			
+			top:50%;
+		}
+		#head-portrait{
+			border-radius: 50%; /*圆角50%，效果圆形*/
+			-webkit-border-radius: 50%;;
+			width:80px;
+			height: 80px;
+			margin: 0px auto;
+			background: url("img/head portrait.jpg");
+			background-size: cover;
+			transition: 1s;
+			
+		}
+		#head-portrait:hover{
+			transform: rotate(360deg);
+			-moz-transform:rotate(720deg);
+			-mo-transform:rotate(360deg);
+		}
+		hr{
+			max-width: 300px;
+			
+			height: 1px;
+			border: none;
+			background-image: linear-gradient(0deg,transparent,#d5d5d5,transparent);
+			background-image: -webkit-linear-gradient(0deg, transparent, #d5d5d5, transparent);
+		}
+		.text-onclick{
+			width:300px;
+			height: 300px;
+			border: 1px solid red;
+			text-align: center;
+			color: white;
+			margin: 0px auto;
+		}
+		#we{display: none;}
+	</style>
+	
+	<script>
+		function ooo(){
+			window.location.href="家谱网.html";
+		}
+	    function appear(){
+			var owechat=document.getElementsById('we');
+			owechat.style.display="block";
+		}
+	</script>
+	
+</head>
+
+<body>
+	<div id="mediate">
+		<div id="head-portrait"  ondblClick="alert('双击了')"  title="回到首页。"></div>
+		<hr>
+		<div class="text-onclick"><a onmouseover="appear()">微信</a><span>&nbsp;|&nbsp;</span><a id="a2">QQ</a>
+			<p></p>
+			<img id="we" src="weixin.png" width="100px"/>
+		</div>
+	</div>
+</body>
+</html>
